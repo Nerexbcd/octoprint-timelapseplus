@@ -14,20 +14,20 @@ plugin_package = "octoprint_timelapseplus"
 plugin_name = "TimelapsePlus"
 
 # The plugin's version. Can be overwritten within OctoPrint's internal data via __plugin_version__ in the plugin module
-plugin_version = "1.4.1"
+plugin_version = "2.0.1"
 
 # The plugin's description. Can be overwritten within OctoPrint's internal data via __plugin_description__ in the plugin
 # module
 plugin_description = "Timelapse+ is a powerful yet lightweight plugin to capture, enhance and render your print timelapses."
 
 # The plugin's author. Can be overwritten within OctoPrint's internal data via __plugin_author__ in the plugin module
-plugin_author = "Christoph Muche"
+plugin_author = "Nerexbcd | OG: Christoph Muche"
 
 # The plugin's author's mail address.
-plugin_author_email = "dev@cmuche.de"
+plugin_author_email = "me@nerexbcd.dev | OG: dev@cmuche.de"
 
 # The plugin's homepage URL. Can be overwritten within OctoPrint's internal data via __plugin_url__ in the plugin module
-plugin_url = "https://github.com/cmuche/octoprint-timelapseplus"
+plugin_url = "https://github.com/Nerexbcd/octoprint-timelapseplus"
 
 # The plugin's license. Can be overwritten within OctoPrint's internal data via __plugin_license__ in the plugin module
 plugin_license = "CC BY-ND"
