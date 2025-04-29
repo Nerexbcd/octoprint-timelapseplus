@@ -34,14 +34,16 @@ class FrameZip:
         return hashlib.md5(c.encode('utf-8')).hexdigest()
 
     def getJSON(self):
+        import flask
+        data = flask.request.get_json()
         return dict(
             id=self.ID,
             file=self.FILE,
             frames=self.FRAMES,
             size=self.SIZE,
             timestamp=self.TIMESTAMP,
-            thumbnail='/plugin/timelapseplus/thumbnail?type=frameZip&id=' + self.ID,
-            url='/plugin/timelapseplus/download?type=frameZip&id=' + self.ID
+            thumbnail=data["webcamUrlPath"] + '/plugin/timelapseplus/thumbnail?type=frameZip&id=' + self.ID,
+            url=data["webcamUrlPath"] + '/plugin/timelapseplus/download?type=frameZip&id=' + self.ID
         )
 
     def countFrames(self):

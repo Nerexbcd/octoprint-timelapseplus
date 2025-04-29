@@ -50,6 +50,8 @@ class Video:
             os.remove(self.THUMBNAIL)
 
     def getJSON(self):
+        import flask
+        data = flask.request.get_json()
         return dict(
             id=self.ID,
             file=self.FILE,
@@ -57,8 +59,8 @@ class Video:
             length=self.LENGTH,
             timestamp=self.TIMESTAMP,
             extension=self.EXTENSION,
-            thumbnail='/plugin/timelapseplus/thumbnail?type=video&id=' + self.ID,
-            url='/plugin/timelapseplus/download?type=video&id=' + self.ID
+            thumbnail=data["webcamUrlPath"] + '/plugin/timelapseplus/thumbnail?type=video&id=' + self.ID,
+            url=data["webcamUrlPath"] + '/plugin/timelapseplus/download?type=video&id=' + self.ID
         )
 
     def getId(self):

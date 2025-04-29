@@ -209,7 +209,8 @@ class TimelapsePlusPlugin(
             stabilizationSettings=StabilizationSettings().getJSON(),
             snapshotInfo=True,
             snapshotInfoFrame=SnapshotInfoFrame.ZOOM_ALL.name,
-            renderMultithreading=True
+            renderMultithreading=True,
+            webcamUrlPath=""
         )
 
     def get_template_vars(self):
@@ -247,7 +248,8 @@ class TimelapsePlusPlugin(
             stabilizationSettings=stabilizationSettings,
             snapshotInfo=self._settings.get(["snapshotInfo"]),
             snapshotInfoFrame=self._settings.get(["snapshotInfoFrame"]),
-            renderMultithreading=self._settings.get(["renderMultithreading"])
+            renderMultithreading=self._settings.get(["renderMultithreading"]),
+            webcamUrlPath=self._settings.get(["webcamUrlPath"])
         )
 
     def listFrameZips(self):
